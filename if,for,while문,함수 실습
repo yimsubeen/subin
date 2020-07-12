@@ -1,0 +1,144 @@
+#2739
+N=int(input())
+for a in [1,2,3,4,5,6,7,8,9]:
+  print (N, '*', a, '=', N*a)
+
+#10950
+T=int(input())
+for a in range (T):
+  A,B= input().split()
+  A=int(A)
+  B=int(B)
+  print (A+B)
+
+#8393
+n=int(input())
+x=0
+for a in range (1,n+1):
+  x=x+a
+print(x)
+
+#15552
+import sys
+T=int(sys.stdin.readline())
+for x in range (T):
+  A,B= sys.stdin.readline().split()
+  A=int(A)
+  B=int(B)
+  print (A+B)
+
+#2741
+N=int(input())
+for x in range (1,N+1):
+  print (x)
+
+#2742
+N=int(input())
+for x in range (N,0,-1):
+  print (x)
+
+#11021
+T=int(input())
+for x in range (T):
+  A,B= input().split()
+  A=int(A)
+  B=int(B)
+  print ('Case #',x+1,': ',A+B,sep="")
+
+#11022
+T=int(input())
+for x in range (T):
+  A,B= input().split()
+  A=int(A)
+  B=int(B)
+  print ('Case #',x+1,': ',A,' + ',B,' = ',A+B,sep="")
+
+#2438
+N=int(input())
+for x in range (N):
+  print("*" * (x+1))
+
+#2439
+N=int(input())
+for x in range (N):
+  print(" " * (N-x-1),"*" * (x+1),sep="")
+
+#10871
+N,X=input().split()
+X=int(X)
+smaller=""
+A=input().split()
+for a in A:
+  if int(a) < X:
+    smaller=smaller+" "+a
+print(smaller[1:])
+
+#10952
+while True:
+  A,B=input().split()
+  A=int(A)
+  B=int(B)
+  if A==0:
+    break
+  else:
+    print (A+B)
+
+
+#10951
+while True:
+  try:
+    A,B=input().split()
+    A=int(A)
+    B=int(B)
+    print (A+B)
+  except:
+    break
+
+#1110
+N=int(input())
+x=N
+y=-1
+a=0
+while True:
+  if y==N:
+    break
+  else:
+    x=(x%10)*10 + (x//10 + x%10)%10
+    y=x
+    a=a+1
+print(a)
+
+#15596
+def solve(a):
+  return (sum(a))
+
+#4673
+def d(n):
+  return (n+n//1000+(n//100)%10+(n//10)%10+n%10)
+list=list(range(1,10001))
+for n in range (1,10000):
+  if d(n)<=10000:
+    if d(n) in list:
+      list.remove(d(n))
+x=len(list)
+for k in range(x):
+  print(list[k])
+
+#1065
+N_str=input()
+number_of_hansu=0
+def f(N):
+  if int(N)<100:
+    return True
+  else:
+    N=str(N)
+    if 2*int(N[1])==int(N[0])+int(N[2]):
+      return True
+    else:
+      return False
+
+for b in range(1,int(N_str)+1):
+  if f(b)==True:
+    number_of_hansu+=1
+
+print(number_of_hansu)
